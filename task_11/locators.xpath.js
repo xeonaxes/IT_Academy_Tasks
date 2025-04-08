@@ -1,5 +1,7 @@
-
 import {Builder, until, By} from "selenium-webdriver";
+
+// Функция для фиксированных задержек
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 describe('BBC Test', () => {
   let driver;
@@ -24,10 +26,11 @@ describe('BBC Test', () => {
     );
     await searchInput.sendKeys('Hello, Liza!');
     
-    const closeMenuButton = await driver.findElement(
-      By.xpath('//*[@aria-label="Close menu"]')
+    const closeMenuButton = await driver.wait(
+      until.elementLocated(By.xpath('//*[@aria-label="Close menu"]')),
+      10000
     );
-    await driver.sleep(2000);
+    await delay(2000); 
     await driver.wait(until.elementIsEnabled(closeMenuButton), 1000);
     await closeMenuButton.click();
     
@@ -36,7 +39,7 @@ describe('BBC Test', () => {
       until.elementLocated(By.xpath('//*[@data-testid="mainNavigationLink"]')), 
       10000
     );
-    await driver.sleep(2000);
+    await delay(2000); 
     await menuInput.click();
     
     // Метка времени1
@@ -44,7 +47,7 @@ describe('BBC Test', () => {
       until.elementLocated(By.xpath('//*[@data-testid="card-metadata-lastupdated"]')), 
       10000
     );
-    await driver.sleep(2000);
+    await delay(2000); 
     await metkaTime1.click();
     
     // Основной блок новости
@@ -52,7 +55,7 @@ describe('BBC Test', () => {
       until.elementLocated(By.xpath('//*[@data-testid="card-media-wrapper"]')), 
       10000
     );
-    await driver.sleep(2000);
+    await delay(2000); 
     await mainImage.click();
     
     // Метка времени2
@@ -60,7 +63,7 @@ describe('BBC Test', () => {
       until.elementLocated(By.xpath('//*[@data-testid="card-metadata-lastupdated"]')), 
       10000
     );
-    await driver.sleep(2000);
+    await delay(2000); 
     await metkaTime2.click();
     
     // Заголовок
@@ -68,7 +71,7 @@ describe('BBC Test', () => {
       until.elementLocated(By.xpath('//*[@data-testid="card-headline"]')), 
       10000
     );
-    await driver.sleep(2000);
+    await delay(2000); 
     await carTech.click();
   });
 
