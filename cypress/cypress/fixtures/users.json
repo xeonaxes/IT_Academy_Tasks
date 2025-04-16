@@ -1,0 +1,8 @@
+{
+  "user1": {
+    "fullName": "Liza Vlasova",
+    "email": "liza@vlas.com",
+    "currentAddress": "111 Street",
+    "permanentAddress": "222 Street"
+  }
+}
