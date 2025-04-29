@@ -1,0 +1,22 @@
+console.log("string" + true);        
+console.log("string" + 5);           
+console.log(10 + false);             
+
+
+console.log("10" * true);            
+console.log("5" * 2);               
+console.log(7 * false);             
+
+
+console.log("10" / true);            
+console.log("20" / 4);              
+console.log(8 / false);              
+
+
+let num = "111";
+let str = 222;
+let bool = 1;
+
+console.log(Number(num));            
+console.log(String(str));            
+console.log(Boolean(bool));          
