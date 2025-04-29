@@ -1,0 +1,23 @@
+{
+  "name": "liza_it_academy_tasks",
+  "version": "1.0.0",
+  "description": "task",
+  "main": "index.js",
+  "scripts": {
+    "test": "node task"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeonaxes/Liza_IT_Academy_Tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xeonaxes/Liza_IT_Academy_Tasks/issues"
+  },
+  "homepage": "https://github.com/xeonaxes/Liza_IT_Academy_Tasks#readme",
+  "dependencies": {
+    "fs-extra": "^11.3.0"
+  }
+}
